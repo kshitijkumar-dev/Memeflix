@@ -31,7 +31,7 @@ The goal of this project was to understand how HTML, CSS, and JavaScript work to
 - JavaScript  
 - Fetch API  
 - GitHub Pages  
- Memes provided by: https://meme-api.com/gimme
+ Memes provided by: https://meme-api.com
 
 
 ## 👤 Author
