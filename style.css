@@ -64,3 +64,17 @@ button:hover {
 .meme-box img:hover {
   transform: scale(1.05);
 }
+
+.dark {
+  background: #121212;
+}
+
+.dark .container {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark button {
+  background: #333;
+  color: white;
+}
