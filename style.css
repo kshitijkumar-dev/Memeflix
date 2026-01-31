@@ -50,3 +50,9 @@ button {
 button:hover {
   background: #5563d6;
 }
+
+#loading {
+  display: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
