@@ -1,18 +1,30 @@
 const btn = document.getElementById("btn");
 const memeImg = document.getElementById("memeImg");
 const memeTitle = document.getElementById("memeTitle");
+const loading = document.getElementById("loading");
 
+//function for generation of meme
 async function getMeme() {
+  loading.style.display = "block";
+  memeImg.style.display = "none";
+
   try {
     const response = await fetch("https://meme-api.com/gimme");
     const data = await response.json();
 
     memeImg.src = data.url;
     memeTitle.innerText = data.title;
-  } catch (error) {
-    memeTitle.innerText = "Failed to load meme 😢";
+
+    memeImg.onload = () => {
+      loading.style.display = "none";
+      memeImg.style.display = "block";
+    };
+
+  } catch {
+    loading.innerText = "Failed to load meme ;-; ";
   }
 }
+//end of function
 
 btn.addEventListener("click", getMeme);
 
