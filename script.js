@@ -2,6 +2,7 @@ const btn = document.getElementById("btn");
 const memeImg = document.getElementById("memeImg");
 const memeTitle = document.getElementById("memeTitle");
 const loading = document.getElementById("loading");
+const themeBtn = document.getElementById("themeBtn");
 
 //function for generation of meme
 async function getMeme() {
@@ -26,7 +27,10 @@ async function getMeme() {
 }
 //end of function
 
-btn.addEventListener("click", getMeme);
+//for dark theme
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
 // Load first meme as soon as website opens
 getMeme();
